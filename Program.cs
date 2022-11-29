@@ -19,3 +19,19 @@ string[] Create3ElementArray(string[] array, int elementLenght = 3)
     }
     return newArray;
 }
+
+void PrintStringArray(string[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write("'" + array[i] + "'");
+        if(i < array.Length -1) Console.Write(",");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("Default array:");
+PrintStringArray(array);
+string[] newStringArray = Create3ElementArray(array);
+Console.WriteLine("New array:");
+PrintStringArray(newStringArray);
